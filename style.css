@@ -13,7 +13,6 @@
     flex-direction: column;
   }
 
-  /* Navbar Styles */
   .navbar {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -128,6 +127,16 @@
     margin-bottom: 1rem;
   }
 
+  .hero-text a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+  }
+
+  .hero-text a:hover {
+    color: #2980b9;
+  }
+
   .hero-content::after {
     content: "";
     display: table;
@@ -186,7 +195,6 @@
     max-width: calc(1008px - 4rem);
   }
 
-  /* Page titles for experience and projects */
   body:has(.experience-section) .main-content h1,
   body:has(.projects-section) .main-content h1 {
     color: #2c3e50;
@@ -266,7 +274,6 @@
     text-align: right;
   }
 
-  /* Responsive Design */
   @media (max-width: 768px) {
     .nav-container {
       padding: 0 1rem;
@@ -291,7 +298,6 @@
       padding: 0 1rem;
     }
 
-    /* Mobile overrides for max-width calculations */
     .hero-text,
     .experience-section,
     .projects-section,
