@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Times New Roman', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Navbar Styles */
+  .navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-container {
+    max-width: 1008px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .logo:hover {
+    color: #3498db;
+  }
+
+  .nav-links {
+    font-size: 1.2rem;
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+  .nav-links a:hover {
+    color: #3498db;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    max-width: 1008px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  /* Main Content for Experience and Projects Pages */
+  body:has(.experience-section) .main-content,
+  body:has(.projects-section) .main-content {
+    margin: 0;
+    max-width: none;
+    padding: 2rem 0 2rem 2rem;
+    padding-left: calc((100vw - 1008px) / 2 + 2rem);
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 2rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+  }
+
+  .hero-content {
+    display: block;
+  }
+
+  .hero-image {
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #333;
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(52, 152, 219, 0.3);
+  }
+
+  /* Experience and Projects Sections - Text wraps at Projects end position */
+  .experience-section,
+  .projects-section {
+    text-align: left;
+    max-width: calc(1008px - 4rem);
+  }
+
+  .experience-section h2,
+  .projects-section h2 {
+    color: #2c3e50;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    max-width: calc(1008px - 4rem);
+  }
+
+  .projects-section h2 a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    display: inline-block;
+  }
+
+  .projects-section h2 a:hover {
+    color: #3498db;
+    transform: scale(1.05);
+  }
+
+  .experience-section p,
+  .projects-section p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    max-width: calc(1008px - 4rem);
+  }
+
+  /* Page titles for experience and projects */
+  body:has(.experience-section) .main-content h1,
+  body:has(.projects-section) .main-content h1 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    max-width: calc(1008px - 4rem);
+  }
+
+  body:has(.projects-section) .main-content > p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: calc(1008px - 4rem);
+  }
+
+  /* Footer Styles */
+  .footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: auto;
+  }
+
+  .footer-container {
+    max-width: 1008px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: calc(1008px - 4rem);
+  }
+
+  .footer-left p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+  }
+
+  .footer-left p:first-child {
+    font-size: 1.1rem;
+  }
+
+  .footer-center {
+    flex: 0 0 auto;
+  }
+
+  .linkedin-link {
+    text-decoration: none;
+  }
+
+  .linkedin-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: 2px solid white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .linkedin-icon:hover {
+    border-color: #3498db;
+    transform: scale(1.05);
+  }
+
+  .footer-right p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+    text-align: right;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-container {
+      padding: 0 1rem;
+    }
+    
+    .nav-links {
+      gap: 1rem;
+    }
+    
+    .main-content {
+      padding: 1rem;
+    }
+
+    /* Override the special positioning for mobile */
+    body:has(.experience-section) .main-content,
+    body:has(.projects-section) .main-content {
+      padding: 1rem;
+      padding-left: 1rem;
+    }
+
+    .footer-container {
+      padding: 0 1rem;
+    }
+
+    /* Mobile overrides for max-width calculations */
+    .hero-text,
+    .experience-section,
+    .projects-section,
+    .experience-section h2,
+    .projects-section h2,
+    .experience-section p,
+    .projects-section p,
+    body:has(.experience-section) .main-content h1,
+    body:has(.projects-section) .main-content h1,
+    body:has(.projects-section) .main-content > p,
+    .footer-content {
+      max-width: none;
+    }
+
+    .hero-content {
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .hero-image {
+      float: none;
+      margin-right: 0;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .hero-text {
+      text-align: center;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .profile-image {
+      width: 200px;
+      height: 200px;
+    }
+
+    .linkedin-icon {
+      width: 32px;
+      height: 32px;
+      font-size: 14px;
+    }
+  }
