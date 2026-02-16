@@ -224,6 +224,16 @@
     max-width: calc(1008px - 4rem);
   }
 
+  body:has(.experience-section) .main-content h1 a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+  }
+
+  body:has(.experience-section) .main-content h1 a:hover {
+    color: #2980b9;
+  }
+
   body:has(.projects-section) .main-content > p {
     color: #666;
     font-size: 1.1rem;
