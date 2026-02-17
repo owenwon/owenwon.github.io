@@ -193,9 +193,16 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     max-width: calc(1008px - 4rem);
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
   }
 
-  .experience-heading h2 {
+  .experience-heading:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .experience-section .experience-heading h2 {
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -219,6 +226,26 @@
     max-width: calc(1008px - 4rem);
   }
 
+  .projects-section h2 {
+    border-top: 1px solid #ddd;
+    padding-top: 2rem;
+  }
+
+  .projects-section h2:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .project-img {
+    width: 100%;
+    max-width: calc(1008px - 4rem);
+    height: auto;
+    display: block;
+    border: 1px solid #2c3e50;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+
   .projects-section h2 a {
     color: #2c3e50;
     text-decoration: none;
@@ -235,8 +262,9 @@
   .projects-section p {
     color: #666;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     font-size: 1.1rem;
+    padding-bottom: 1rem;
     max-width: calc(1008px - 4rem);
   }
 
