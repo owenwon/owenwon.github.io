@@ -215,6 +215,16 @@
     padding-top: 0;
   }
 
+  .projects-section h2:has(+ .project-subtitle) {
+    margin-bottom: 0.25rem;
+  }
+
+  .project-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: calc(1008px - 4rem);
+  }
+
   .project-img {
     width: 100%;
     max-width: calc(1008px - 4rem);
@@ -241,10 +251,17 @@
   .projects-section p {
     color: #666;
     line-height: 1.6;
-    margin-bottom: 2rem;
     font-size: 1.3rem;
     padding-bottom: 1rem;
     max-width: calc(1008px - 4rem);
+  }
+  
+  .experience-section p {
+    margin-bottom: 2rem;
+  }
+  
+  .projects-section p {
+    margin-bottom: 0.25rem;
   }
 
   body:has(.experience-section) .main-content h1,
@@ -367,6 +384,7 @@
     .projects-section h2,
     .experience-section p,
     .projects-section p,
+    .project-subtitle,
     body:has(.experience-section) .main-content h1,
     body:has(.projects-section) .main-content h1,
     body:has(.projects-section) .main-content > p,
